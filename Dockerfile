@@ -1,5 +1,4 @@
 FROM eclipse-temurin:17-jdk-jammy
-WORKDIR /app
-COPY target/docker-with-jenkins.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ADD target/docker-with-jenkins.jar docker-with-jenkins.jar
+ENTRYPOINT ["java","-jar","/docker-with-jenkins.jar"]
